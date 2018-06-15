@@ -38,10 +38,44 @@ namespace TrackYourWork.Repository
             paramsall[0] = spmEmaildId;
             paramsall[1] = spmTickDesc;
             paramsall[2] = spmTicketType;
+            try
+            {
+                DataInserted = client.ExecuteStoredProc(spname, ConnectionString, paramsall);
+                return "Success";
+            }
+            catch (Exception e)
+            {
+                return string.Empty;
+            }
 
-            DataInserted = client.ExecuteStoredProc(spname, ConnectionString, paramsall);
+        }
 
-            return string.Empty;
+        public DataSet GetTicketDetails()
+        {
+            string query = string.Empty;
+            DataSet ds = new DataSet();
+
+            query = "SELECT [TicketId],[TicketDesc],[Status],[IsActive],[AssignedTo] FROM[TrackerDB].[dbo].[vwGetTicketList]";
+            DataAccessClient da = new DataAccessClient();
+            ds = da.ExecuteQuery(ConnectionString, query);
+            return ds;
+        }
+
+        public void DeleteTicketByRowId(int rowId)
+        {
+            String query = String.Format("DELETE FROM [dbo].[tbTickets] where TicketId ={0}", rowId);
+            DataAccessClient da = new DataAccessClient();
+            da.ExecuteQuery(ConnectionString, query);
+        }
+
+        public void UpdateTicketDetails(string tDesc, string status, string assignedTo, int ticketId)
+        {
+            String query = String.Format("Update [dbo].[tbTickets] SET TicketDesc = '{0}', Status = '{1}', [AssignedTo]= "
+                + "(SELECT Id from [TrackerDB].[dbo].[tbUser] WHERE UserName ='{2}') WHERE TicketId = {3}",tDesc, status, assignedTo, ticketId);
+            DataAccessClient da = new DataAccessClient();
+            da.ExecuteQuery(ConnectionString, query);
+
         }
     }
+
 }

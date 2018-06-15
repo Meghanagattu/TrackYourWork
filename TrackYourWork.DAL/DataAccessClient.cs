@@ -45,6 +45,37 @@ namespace TrackYourWork.DAL
                 }
             }
         }
+
+        public DataSet ExecuteQuery(string ConString, string Query)
+        {
+            DataSet dsResult = new DataSet();
+            using (SqlConnection sqlCon = new SqlConnection(ConString))
+            {
+                try
+                {
+                    sqlCon.Open();
+                    using (SqlCommand sqlCmd = sqlCon.CreateCommand())
+                    {
+                        sqlCmd.CommandType = CommandType.Text;
+                        sqlCmd.CommandText = Query;
+                        SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCmd);
+                        sqlDa.Fill(dsResult);
+                    }
+                    return dsResult;
+                }
+                catch (Exception ex)
+                {
+                    // return null;
+                    throw;
+                }
+                finally
+                {
+                    dsResult.Dispose();
+                    sqlCon.Close();
+                    sqlCon.Dispose();
+                }
+            }
+        }
     }
 
     

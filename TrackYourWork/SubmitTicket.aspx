@@ -52,7 +52,7 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell ColumnSpan="2" HorizontalAlign="Center">
-                        <asp:Button runat="server" Text="Submit" ID="btnSubmit" CausesValidation="true" OnClick="btnSubmit_Click" />
+                        <asp:Button runat="server" Text="Submit" ID="btnSubmit" CausesValidation="true" OnClick="btnSubmit_Click" UseSubmitBehavior="true" />
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>

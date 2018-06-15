@@ -28,6 +28,10 @@ namespace TrackYourWork
 
             TYWRepo tywRepo = new TYWRepo();
             string result = tywRepo.CreateNewTicket(emailId, ticketDesc, ticketType);
+            if (String.Compare(result, "Success") == 0)
+                Response.Write("<script>alert('Data inserted successfully')</script>");
+            else
+                Response.Write("<script>alert('Oops!! Something went wrong, please try again!')</script>");
         }
     }
 }

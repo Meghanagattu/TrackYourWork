@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackYourWork.Repository", "TrackYourWork.Repository\TrackYourWork.Repository.csproj", "{E2CD6C74-1EDB-407C-8C2B-E72D06B297E5}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TrackerDB", "TrackYourWork.DB\TrackerDB.sqlproj", "{3974C0AA-4039-4F65-A685-7EDCED9D7160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{E2CD6C74-1EDB-407C-8C2B-E72D06B297E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CD6C74-1EDB-407C-8C2B-E72D06B297E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CD6C74-1EDB-407C-8C2B-E72D06B297E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3974C0AA-4039-4F65-A685-7EDCED9D7160}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
