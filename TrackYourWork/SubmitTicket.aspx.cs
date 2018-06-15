@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TrackYourWork.Repository;
 
 namespace TrackYourWork
 {
@@ -24,6 +25,9 @@ namespace TrackYourWork
             emailId = tbEmailId.Text;
             ticketDesc = tbTicketDesc.Text;
             ticketType = ddlTicketType.SelectedValue;
+
+            TYWRepo tywRepo = new TYWRepo();
+            string result = tywRepo.CreateNewTicket(emailId, ticketDesc, ticketType);
         }
     }
 }

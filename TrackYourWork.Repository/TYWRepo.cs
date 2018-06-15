@@ -34,6 +34,13 @@ namespace TrackYourWork.Repository
 
             SqlParameter spmTicketType = new SqlParameter("@ticketType", SqlDbType.NVarChar, 15);
             spmTicketType.Value = ticketType;
+
+            paramsall[0] = spmEmaildId;
+            paramsall[1] = spmTickDesc;
+            paramsall[2] = spmTicketType;
+
+            DataInserted = client.ExecuteStoredProc(spname, ConnectionString, paramsall);
+
             return string.Empty;
         }
     }
