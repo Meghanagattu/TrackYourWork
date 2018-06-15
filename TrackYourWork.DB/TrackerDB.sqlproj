@@ -61,6 +61,7 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\Views" />
+    <Folder Include="dbo\InsertScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\tbTickets.sql" />
@@ -68,5 +69,6 @@
     <Build Include="dbo\StoredProcedures\uspInsertNewTicket.sql" />
     <Build Include="dbo\StoredProcedures\uspInsertNewUser.sql" />
     <Build Include="dbo\Views\vwGetTicketList.sql" />
+    <Build Include="dbo\InsertScripts\Inserts.sql" />
   </ItemGroup>
 </Project>
