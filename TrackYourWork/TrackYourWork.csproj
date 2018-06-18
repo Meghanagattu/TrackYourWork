@@ -353,11 +353,9 @@
     </Compile>
     <Compile Include="SubmitTicket.aspx.designer.cs">
       <DependentUpon>SubmitTicket.aspx</DependentUpon>
-    </Compile>
-         <SubType>ASPXCodeBehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
 
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
