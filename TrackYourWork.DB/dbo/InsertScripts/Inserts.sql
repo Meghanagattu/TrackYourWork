@@ -1,3 +1,3 @@
-﻿INSERT INTO [dbo].[tbUser]
-VALUES
-('DefaultUser','');
+﻿--INSERT INTO [dbo].[tbUser]
+--VALUES
+--('DefaultUser','');

@@ -46,7 +46,7 @@
                             <asp:ListItem Value="Other">Other</asp:ListItem>
                         </asp:DropDownList>
                         <asp:RequiredFieldValidator ID="rfvddlTicketTyoe" runat="server" ControlToValidate="ddlTicketType"
-                            InitialValue="--Select--" ErrorMessage="Please select something" />
+                            InitialValue="NoItemSelected" ErrorMessage="Please select something" />
 
                     </asp:TableCell>
                 </asp:TableRow>
